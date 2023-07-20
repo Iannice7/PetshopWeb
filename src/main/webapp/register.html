@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Registrati</title>
+<link rel="stylesheet" type="text/css" href="./css/register.css">
+</head>
+<body>
+<div class="container">
+	<div class="screen">
+		<div class="screen__content">
+			<form class="register" action = "./jsp/register.jsp" method="post">
+				<div class="register__field">
+					<i class="register__icon fas fa-user"></i>
+					<input type="text" class="register__input" name="nome" placeholder="Nome">
+				</div>
+				<div class="register__field">
+					<i class="register__icon fas fa-lock"></i>
+					<input type="text" class="register__input" name="cognome" placeholder="Cognome">
+				</div>
+				<div class="register__field">
+					<i class="register__icon fas fa-lock"></i>
+					<input type="email" class="register__input" name ="email" placeholder="Email">
+				</div>
+				<div class="register__field">
+					<i class="register__icon fas fa-lock"></i>
+					<input type="text" class="register__input" placeholder="Cellulare">
+				</div>
+					<div class="register__field">
+					<i class="register__icon fas fa-lock"></i>
+					<input type="date" class="register__input" placeholder="Data di nascita">
+				</div>
+					<div class="register__field">
+					<i class="register__icon fas fa-lock"></i>
+					<input type="password" class="register__input" placeholder="Password">
+				</div>
+				Sei gia registrato?<a href="login.html">Login</a>
+				<!-- <button class="button register__submit">
+					<span class="button__text">Registrati ora!</span>
+					<i class="button__icon fas fa-chevron-right"></i>
+				</button>	-->
+				<input type="submit" value="Registrati"/>	
+			</form>
+		</div>
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>		
+	</div>
+</div>
+</body>
+</html>
