@@ -11,17 +11,18 @@ public class ClienteDao {
 
 public static int save(Cliente c) {
 	int status=0;
-	String sql = "INSERT INTO cliente (nome,cognome,email,cellulare,data_di_nascita,passwd) VALUES(?,?,?,?,?,?)";
+	String sql = "INSERT INTO cliente (nome,cognome,email,cellulare,passwd,data_di_nascita,username) VALUES(?,?,?,?,?,?,?)";
 	try {
 		PreparedStatement ps = db.getConnection().prepareStatement(sql);
 		ps.setString(1, c.getNome());
 		ps.setString(2, c.getCognome());
 		ps.setString(3, c.getEmail());
 		ps.setString(4, c.getCellulare());
-		ps.setString(5, c.getDataDiNascita());
-		ps.setString(6, c.getPassword());
-		//String username = c.getNome().substring(0,1) + c.getCognome().substring(0,1) + c.getDataDiNascita().substring(5,8);
-		//ps.setString(7, c.getUsername());
+		ps.setString(5, c.getPassword());
+		ps.setString(6, c.getDataDiNascita());
+		System.out.println(c.getDataDiNascita());
+		String username = c.getNome().substring(0, 2) + c.getCognome().substring(0, 2) + c.getDataDiNascita().substring(2, 4);
+		ps.setString(7, username);
 		status=ps.executeUpdate();
 	} catch (Exception e) {
 		e.printStackTrace();
